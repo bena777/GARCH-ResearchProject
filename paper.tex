@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{GARCH Models and Applications}
+\author{Benjamin Adelman}
+\date{December 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Abstract}
+This paper will investigate both the theoretical underlying of what a GARCH model actually is/trying to measure as well as potential real applications of the family of models. As a part of this, it is important to select a specific GARCH model out of the 100s of models in the family to focus on. This paper will focus on determining which version of the standard GARCH model works the best in predicting the future volatility of various different asset classes. This will involve first understanding the components of the GARCH model (volatility clustering, conditional heteroskedasticity etc.), researching its potential applications in predicting volatility clustering in specific markets, then implementing it into code with data to test it on. Finally, statistical testing will be used to determine the significance of the results and compare the volatility models between each other.
+\section{Definitions}
+An ARCH model uses past returns along with an error term to model future volatility. It is described in the form ARCH(p) where p is the number of lags and can be written as $$\sigma^2_t = \omega + \alpha_1\epsilon^2_{t-1} ... + \alpha_q \epsilon^2_{t-q}$$
+A GARCH model is known as the "generalized ARCH model" and accounts for past volatility in addition to past returns (like ARCH) and subsequent error terms to estimate future volatility. It can be written in the form  of GARCH(p,q) which is expressed with $$\sigma^2_t = \omega + \alpha_1 \epsilon^2_{t-1} +\beta_1 \sigma^2_{t-1} + … + \alpha_q \epsilon_{t-q}^2 + \beta_p \sigma^2_{t-p}$$
+where $\omega$ is a random error term, $\epsilon_t$ is previous return at time t, $\sigma_t$ is the previous variance at time t, and $\alpha_i$ and $\beta_i$ are coefficients $>0$ \\
+\\
+Both of these coefficients are commonly regressed using the ordinary least squares model of best fit, something that will be further discussed later. What both of these models are essentially trying to do is predict a future volatility by using past returns (or in the case of GARCH, past returns and past volatility). The GARCH model will be the main focus of this paper due to its unique ability to capture long term volatility patterns, however it is important to understand the foundations first.
+\section{Setup}
+The coding portion of this research project will be explained on a high level, however the Github repo with the actual code used for testing will be linked at the end of the paper. The Python programming language was used to impliment this project along with the libraries "yfinance" to access equity data, "arch" to fit the models, as well as "matplotlib" and "statsmodels" to display results.  \\
+\\
+I chose to analyze three different assets for this project. The S\&P 500 (SPY), 
+\section{References}
+Engle, R. (2001). GARCH 101: The use of ARCH/GARCH models in applied econometrics. \textit{Journal of Economic Perspectives}, \textbf{15}(4), 157–168. \\
+\\
+Gondalia, V. (2018). Measuring conditional volatility using GARCH (2, 2) model from an empirical standpoint. \textit{NLDIMSR Innovision Journal of Management Research}, \textbf{2}(2), 35-38.
+\end{document}
