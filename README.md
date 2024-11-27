@@ -1,0 +1,5 @@
+
+Repository for my capstone research project during my first semester as a member of the AlgoGators fund at University of Florida. Go Gators!
+
+### Abstract
+This paper will investigate both the theoretical underlying of what a GARCH model is trying to measure as well as potential real applications of the family of models. It will also focus on determining which version of the standard GARCH model works the best in predicting the future volatility of various different asset classes. This will involve first understanding the components of the GARCH model (formulation, properties etc.), researching its potential applications in predicting volatility clustering in specific markets, then implementing it into code with data to test it on. Finally, statistical testing will be used to compare the different GARCH models between both each other as well as other volatility models (EWMA).
