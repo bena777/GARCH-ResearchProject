@@ -8,6 +8,7 @@ import warnings
 warnings.filterwarnings("always")
 
 # example of a GARCH(1,1) model
+# This ended up being my foundation for the creation of the generalized_garch function in garch.py
 
 returns_train = yf.download("SPY",start="2010-01-01",end="2019-12-31")["Close"].pct_change().values[1::]*100
 returns_test= yf.download("SPY",start="2020-01-01",end="2024-01-01")["Close"].pct_change().values[1::]*100
