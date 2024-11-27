@@ -1,3 +1,7 @@
+# I was stumped by how GARCH models worked for a bit at the start of my research project so I created this simulation to help me visualize it better
+# Notice how I purposely created a dataset with the for loops that has clustering volatility, this means it could be a potential good candidate for the GARCH model
+
+
 import yfinance as yf
 from arch import arch_model
 import random
